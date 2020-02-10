@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+ webapplication1:
+      environment: 
+       - ASPNETCORE_ENVIRONMENT=Production
+      configs:
+       - source: prodsettings
+         target: /app/publish/appsettings.json
+
+configs:
+      prodsettings:
+        file: /app/publish/appsettings.Production.json
